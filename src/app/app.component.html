@@ -1,14 +1,9 @@
 <mat-drawer-container fxFlexFill>
   <mat-drawer #drawer mode="over">
-    <div class="sidemenu" style="width: 200px">
-      <div>
-        <a routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</a>
-      </div>
-      <div>
-        <a routerLink="/profile" (click)="drawer.toggle()">Profile</a>
-      </div>
-      <div></div>
-    </div>
+    <mat-list style="width: 200px">
+      <mat-list-item routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</mat-list-item>
+      <mat-list-item routerLink="/profile" (click)="drawer.toggle()">Profile</mat-list-item>
+    </mat-list>
   </mat-drawer>
   <mat-drawer-content fxLayout="column">
     <mat-toolbar color="primary" style="position: fixed">
