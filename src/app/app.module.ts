@@ -8,13 +8,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'profile', component: ProfileComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent],
+  declarations: [AppComponent, DashboardComponent, ProfileComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
