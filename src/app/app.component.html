@@ -1,9 +1,13 @@
 <mat-drawer-container fxFlexFill>
   <mat-drawer #drawer mode="over">
     <div class="sidemenu" style="width: 200px">
-      <div>Menu 1</div>
-      <div>Menu 2</div>
-      <div>Menu 3</div>
+      <div>
+        <a routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</a>
+      </div>
+      <div>
+        <a routerLink="/profile" (click)="drawer.toggle()">Profile</a>
+      </div>
+      <div></div>
     </div>
   </mat-drawer>
   <mat-drawer-content fxLayout="column">
