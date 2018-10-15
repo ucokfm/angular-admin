@@ -14,8 +14,8 @@
         </button>
       </mat-toolbar-row>
     </mat-toolbar>
-    <div fxFlex style="background-color: cyan" [ngStyle.lt-sm]="{'padding-top.px': 56}" [ngStyle.gt-xs]="{'padding-top.px': 64}">
-      page content
+    <div fxFlex [ngStyle.lt-sm]="{'padding-top.px': 56}" [ngStyle.gt-xs]="{'padding-top.px': 64}">
+      <router-outlet></router-outlet>
     </div>
   </mat-drawer-content>
 </mat-drawer-container>
