@@ -1,8 +1,8 @@
 <mat-drawer-container fxFlexFill>
   <mat-drawer #drawer [mode]="drawerMode" [opened]="drawerOpened">
     <mat-list style="width: 200px">
-      <mat-list-item routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</mat-list-item>
-      <mat-list-item routerLink="/profile" (click)="drawer.toggle()">Profile</mat-list-item>
+      <mat-list-item (click)="onSelectMenu('dashboard')">Dashboard</mat-list-item>
+      <mat-list-item (click)="onSelectMenu('profile')">Profile</mat-list-item>
     </mat-list>
   </mat-drawer>
   <mat-drawer-content fxLayout="column">
