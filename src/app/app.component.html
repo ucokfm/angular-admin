@@ -1,5 +1,5 @@
 <mat-drawer-container fxFlexFill>
-  <mat-drawer #drawer mode="over">
+  <mat-drawer #drawer [mode]="drawerMode" [opened]="drawerOpened">
     <mat-list style="width: 200px">
       <mat-list-item routerLink="/dashboard" (click)="drawer.toggle()">Dashboard</mat-list-item>
       <mat-list-item routerLink="/profile" (click)="drawer.toggle()">Profile</mat-list-item>
@@ -11,6 +11,7 @@
         <button mat-icon-button (click)="drawer.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
+        <span>{{ title }}</span>
       </mat-toolbar-row>
     </mat-toolbar>
     <div fxFlex [ngStyle.lt-sm]="{'padding-top.px': 56}" [ngStyle.gt-xs]="{'padding-top.px': 64}">
