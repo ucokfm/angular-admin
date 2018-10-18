@@ -13,6 +13,7 @@ import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
+  { path: 'products', component: ProductsComponent },
   { path: 'profile', component: ProfileComponent },
 ];
 
