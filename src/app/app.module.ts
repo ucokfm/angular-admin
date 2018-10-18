@@ -8,6 +8,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 import { AppComponent } from './app.component';
 import { MaterialModule } from './material.module';
+import { ProductsComponent } from './products/products.component';
 import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
@@ -16,7 +17,12 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, DashboardComponent, ProfileComponent],
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    ProductsComponent,
+    ProfileComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
