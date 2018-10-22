@@ -34,14 +34,14 @@ export class ProductService {
     this.service.on('created', product => {
       this.zone.run(() => {
         this.products.push(product);
-        this.products$.next([...this.products]);
+        this.products$.next(this.products);
       });
     });
     this.service.on('updated', product => {
       this.zone.run(() => {
         const index = this.products.findIndex(item => item._id === product._id);
         this.products[index] = product;
-        this.products$.next([...this.products]);
+        this.products$.next(this.products);
       });
     });
   }
@@ -49,7 +49,7 @@ export class ProductService {
   find() {
     this.service.find().then((result: Paginated<Product>) => {
       this.products = result.data;
-      this.products$.next([...result.data]);
+      this.products$.next(result.data);
     });
   }
 }
