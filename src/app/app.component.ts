@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class AppComponent implements OnDestroy {
   drawerMode = 'side';
   drawerOpened = true;
-  title = 'Credit Scoring';
+  title = 'Angular Admin';
   watcher: Subscription;
 
   @ViewChild('drawer')
