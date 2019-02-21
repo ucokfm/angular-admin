@@ -1,0 +1,29 @@
+<mat-drawer-container fxFlexFill>
+  <mat-drawer #drawer [mode]="drawerMode" [opened]="drawerOpened">
+    <mat-list style="width: 200px">
+      <mat-list-item (click)="onSelectMenu('dashboard')">Dashboard</mat-list-item>
+      <mat-list-item (click)="onSelectMenu('products')">Products</mat-list-item>
+      <mat-list-item (click)="onSelectMenu('profile')">Profile</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content fxLayout="column">
+    <mat-toolbar color="primary">
+      <mat-toolbar-row fxLayoutAlign="space-between center">
+        <button mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{ title }}</span>
+        <span>
+          <button mat-button [matMenuTriggerFor]="menu">John Doe</button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>Edit Profile</button>
+            <button mat-menu-item>Logout</button>
+          </mat-menu>
+        </span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <div fxFlex [ngStyle.lt-sm]="{'padding-top.px': 56}" [ngStyle.gt-xs]="{'padding-top.px': 64}">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
